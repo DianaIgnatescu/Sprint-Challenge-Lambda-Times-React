@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import authenticate from '../authentication/authenticate';
+import Login from '../Login/Login';
 
 
 import Tabs from './Tabs';
@@ -14,7 +16,7 @@ const ContentContainer = styled.div`
   align-items: center;
 `;
 
-export default class Content extends Component {
+class Content extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -81,3 +83,5 @@ export default class Content extends Component {
     );
   }
 }
+
+export default authenticate(Content)(Login);
