@@ -14,6 +14,7 @@ export default class Content extends Component {
       tabs: [],
       cards: [],
     };
+    this.changeSelected = this.changeSelected.bind(this);
   }
 
   componentDidMount() {
@@ -24,11 +25,11 @@ export default class Content extends Component {
       tabs: [...tabs],
       cards: [...cards],
     });
-    this.changeSelected = this.changeSelected.bind(this);
   }
 
   changeSelected = (tab) => {
     // this function should take in the tab and update the state with the new tab.
+    this.setState({ selected: tab });
   };
 
   filterCards = () => 
