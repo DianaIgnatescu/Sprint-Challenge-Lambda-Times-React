@@ -14,6 +14,7 @@ const Tabs = ({ tabs, selectTabHandler, selectedTab }) => {
             selectTabHandler={selectTabHandler}
             selectedTab={selectedTab}
             tab={tab}
+            key={tab}
           />
         ))}
       </div>
