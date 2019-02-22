@@ -1,3 +1,4 @@
+/* eslint-disable implicit-arrow-linebreak */
 import React from 'react';
 
 const authenticate = Content => Login => class extends React.Component {
@@ -29,4 +30,3 @@ const authenticate = Content => Login => class extends React.Component {
 };
 
 export default authenticate;
-

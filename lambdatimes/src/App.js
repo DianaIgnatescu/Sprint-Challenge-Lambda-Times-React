@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+/* eslint-disable implicit-arrow-linebreak */
+import React from 'react';
 import styled from 'styled-components';
 import TopBar from './components/TopBar';
 import Header from './components/Header';
