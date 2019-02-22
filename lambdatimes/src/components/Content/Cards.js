@@ -1,11 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Card from './Card';
 
+const CardsContainer = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: none;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 16px;
+  flex-wrap: wrap;
+  @media (min-width: 1200px) {
+    width: 1200px;
+  }
+`;
+
 const Cards = ({ cards }) => {
-  console.log(cards);
   return (
-    <div className="cards-container">
+    <CardsContainer>
       { /* Using the cards prop, map over the list creating a 
           new Card component for each passing the card as the only prop */}
       {cards.map(card => (
@@ -18,7 +31,7 @@ const Cards = ({ cards }) => {
           headline={card.headline}
         />
       ))}
-    </div>
+    </CardsContainer>
   );
 };
 

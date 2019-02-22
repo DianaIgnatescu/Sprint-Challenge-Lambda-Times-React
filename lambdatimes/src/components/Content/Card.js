@@ -1,18 +1,59 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
+
+const CardWrapper = styled.div`
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  justify-content: space-between;
+  align-items: none;
+  flex-direction: column;
+  background-color: #fff;
+  width: 380px;
+  margin-bottom: 16px;
+  padding: 24px;
+`;
+
+const CardHeadline = styled.div`
+  font-size: 25px;
+  font-family: Didot, serif;
+`;
+
+const CardAuthor = styled.div`
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 15px;
+  span {
+    padding-left: 10px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+`;
+
+const ImgContainer = styled.div`
+  padding-right: 10px;
+  border-right: 1px solid lightgrey;
+  height: 40px;
+  img {
+    width: 40px;
+  }
+`;
 
 const Card = ({ headline, img, author }) => {
   return (
-    <div className="card">
-      <div className="headline">{headline}</div>
-      <div className="author">
-        <div className="img-container">
+    <CardWrapper>
+      <CardHeadline>{headline}</CardHeadline>
+      <CardAuthor>
+        <ImgContainer>
           <img src={img} alt="card" />
-        </div>
+        </ImgContainer>
         <span>By {author}</span>
-      </div>
-    </div>
+      </CardAuthor>
+    </CardWrapper>
   );
 };
 
