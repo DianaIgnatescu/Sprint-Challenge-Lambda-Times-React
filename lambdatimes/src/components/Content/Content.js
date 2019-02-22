@@ -15,6 +15,7 @@ export default class Content extends Component {
       cards: [],
     };
     this.changeSelected = this.changeSelected.bind(this);
+    this.filterCards = this.filterCards.bind(this);
   }
 
   componentDidMount() {
