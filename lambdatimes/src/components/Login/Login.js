@@ -22,11 +22,6 @@ const LoginForm = styled.form`
   padding: 50px 20px;
 `;
 
-const LoginLogo = styled.img`
-  max-width: 200px;
-  padding-bottom: 20px;
-`;
-
 const LoginInput = styled.input`
   width: 350px;
   padding: 20px;
